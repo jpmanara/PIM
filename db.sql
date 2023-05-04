@@ -17,6 +17,15 @@ create table Adicional_Funcionario (
 	primary key (id),
 );
 
+create table Desconto_Funcionario (
+	id int not null,
+	funcionario_id int not null,
+	desconto_id int not null,
+	foreign key (funcionario_id) references Funcionario(id),
+	foreign key (desconto_id) references Desconto(id),
+	primary key (id)
+);
+
 create table Pagamento (
 	id int not null, 
 	funcionario_id int not null, 

@@ -1,15 +1,15 @@
-create table TipoPagamento (cod int not null, valor varchar(255), primary key (cod));
-create table TipoDesconto (cod int not null, valor varchar(255), primary key (cod));
-create table TipoAdicional (cod int not null, valor varchar(255), primary key (cod));
+create table TipoPagamento (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
+create table TipoDesconto (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
+create table TipoAdicional (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
 
 create table Funcionario (
-	id int not null,
+	id int identity(1,1) not null,
 	salario_base float not null,
 	primary key (id)
 );
 
 create table Pagamento (
-	id int not null, 
+	id int identity(1,1) not null, 
 	funcionario_id int not null, 
 	tipo_pagamento_cod int not null,
 	data_pagamento DATE not null,
@@ -21,7 +21,7 @@ create table Pagamento (
 );
 
 create table Desconto (
-	id int not null,
+	id int identity(1,1) not null,
 	tipo_desconto_cod int not null,
 	valor float not null,
 
@@ -30,7 +30,7 @@ create table Desconto (
 );
 
 create table Adicional (
-	id int not null,
+	id int identity(1,1) not null,
 	tipo_adicional_cod int not null,
 	valor float not null,
 
@@ -39,7 +39,7 @@ create table Adicional (
 );
 
 create table Adicional_Funcionario (
-	id int not null,
+	id int identity(1,1) not null,
 	funcionario_id int not null,
 	adicional_id int not null,
 	foreign key (funcionario_id) references Funcionario(id),
@@ -48,7 +48,7 @@ create table Adicional_Funcionario (
 );
 
 create table Desconto_Funcionario (
-	id int not null,
+	id int identity(1,1) not null,
 	funcionario_id int not null,
 	desconto_id int not null,
 	foreign key (funcionario_id) references Funcionario(id),
@@ -57,7 +57,7 @@ create table Desconto_Funcionario (
 );
 
 create table Adicional_Pagamento (
-	id int not null,
+	id int identity(1,1) not null,
 	pagamento_id int not null,
 	adicional_id int not null,
 	foreign key (pagamento_id) references Pagamento(id),
@@ -66,7 +66,7 @@ create table Adicional_Pagamento (
 );
 
 create table Desconto_Pagamento (
-	id int not null,
+	id int identity(1,1) not null,
 	pagamento_id int not null,
 	desconto_id int not null,
 	foreign key (pagamento_id) references Pagamento(id),

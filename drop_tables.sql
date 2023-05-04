@@ -1,0 +1,9 @@
+drop table TipoPagamento;
+drop table TipoDesconto;
+drop table TipoAdicional;
+drop table Funcionario;
+drop table Desconto;
+drop table Adicional;
+drop table Adicional_Funcionario;
+drop table Desconto_Funcionario;
+drop table Pagamento;

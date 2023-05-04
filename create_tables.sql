@@ -1,6 +1,6 @@
-create table TipoPagamento (cod int not null, valor varchar(255), primary key (cod));
-create table TipoDesconto (cod int not null, valor varchar(255), primary key (cod));
-create table TipoAdicional (cod int not null, valor varchar(255), primary key (cod));
+create table TipoPagamento (cod int auto_increment not null, valor varchar(255), primary key (cod));
+create table TipoDesconto (cod int auto_increment not null, valor varchar(255), primary key (cod));
+create table TipoAdicional (cod int auto_increment not null, valor varchar(255), primary key (cod));
 
 create table Funcionario (
 	id int auto_increment not null,

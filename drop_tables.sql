@@ -6,4 +6,6 @@ drop table Desconto;
 drop table Adicional;
 drop table Adicional_Funcionario;
 drop table Desconto_Funcionario;
+drop table Adicional_Pagamento;
+drop table Desconto_Pagamento;
 drop table Pagamento;

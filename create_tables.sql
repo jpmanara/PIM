@@ -4,6 +4,7 @@ create table TipoAdicional (cod int identity(1,1) not null, valor varchar(255), 
 
 create table Funcionario (
 	id int identity(1,1) not null,
+	valor_hora float not null,
 	salario_base float not null,
 	primary key (id)
 );
@@ -13,6 +14,7 @@ create table Pagamento (
 	funcionario_id int not null, 
 	tipo_pagamento_cod int not null,
 	data_pagamento DATE not null,
+	horas_trabalhadas float not null,
 	valor float not null,
 
 	primary key (id),

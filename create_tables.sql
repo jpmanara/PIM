@@ -1,11 +1,17 @@
 create table TipoPagamento (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
 create table TipoDesconto (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
 create table TipoAdicional (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
+create table TipoCargo (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
 
 create table Funcionario (
 	id int identity(1,1) not null,
+	nome varchar not null,
+	numero_ctps not null,
+	serie_ctps not null,
+	tipo_cargo_cod int not null, 
 	valor_hora float not null,
-	salario_base float not null,
+	salario_bruto float not null,
+	foreign key (tipo_cargo_cod) references TipoCargo (cod),
 	primary key (id)
 );
 

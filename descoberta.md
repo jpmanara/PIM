@@ -28,7 +28,7 @@ Adicionais:
 - Horas extras: R$ 150,00 (10 horas extras realizadas no mês, com adicional de 50% sobre o valor da hora normal)
 - Adicional noturno: R$ 100,00 (20 horas trabalhadas no período noturno, com adicional de 20% sobre o valor da hora normal)
 - Comissão: R$ 300,00 (venda de produtos no valor total de R$ 3.000,00, com comissão de 10%)
-- 
+
 Salário bruto: R$ 2.650,00
 Total de descontos: R$ 548,00
 Salário líquido: R$ 2.102,00

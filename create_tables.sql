@@ -9,7 +9,6 @@ create table Funcionario (
 	numero_ctps not null,
 	serie_ctps not null,
 	tipo_cargo_cod int not null, 
-	valor_hora float not null,
 	salario_bruto float not null,
 	foreign key (tipo_cargo_cod) references TipoCargo (cod),
 	primary key (id)

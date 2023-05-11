@@ -19,7 +19,7 @@ insert into TipoAdicional (valor) values ('Comissão');
 insert into TipoAdicional (valor) values ('Gratificação');
 insert into TipoAdicional (valor) values ('Auxílio de custo teletrabalho');
 
-insert into Funcionario (nome, numero_ctps, serie_ctps, tipo_cargo_cod, salario_bruto) values ('Johnny', 1234, 4321, 1, 4500.50);
+insert into Funcionario (nome, tipo_cargo_cod, salario_base, jornada_trabalho_semanal) values ('Johnny', 1, 4500.50, 44);
 
 insert into Desconto (tipo_desconto_cod, valor_fixo, porcentagem, min_salario, max_salario) values (1, NULL, 7.5, 0, 1110);
 insert into Desconto (tipo_desconto_cod, valor_fixo, porcentagem, min_salario, max_salario) values (1, NULL, 9, 1110.01, 2203.48);

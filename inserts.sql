@@ -1,6 +1,8 @@
 insert into TipoPagamento (valor) values ('Mensal');
 insert into TipoPagamento (valor) values ('Adiantamento');
 
+insert into TipoCargo (valor) values ('Desenvolvedor');
+
 insert into TipoDesconto (valor) values ('INSS');
 insert into TipoDesconto (valor) values ('Contribuição sindical');
 insert into TipoDesconto (valor) values ('Vale transporte');
@@ -17,7 +19,8 @@ insert into TipoAdicional (valor) values ('Comissão');
 insert into TipoAdicional (valor) values ('Gratificação');
 insert into TipoAdicional (valor) values ('Auxílio de custo teletrabalho');
 
-insert into Funcionario (id, salario_base) values (1, 3000);
+insert into Funcionario (nome, numero_ctps, serie_ctps, tipo_cargo_cod, salario_bruto) values ('Johnny', 1234, 4321, 1, 4500.50);
+
 insert into Desconto (id, tipo_desconto_cod, valor) values ( 1, 1, 253.64);
 insert into Adicional(id, tipo_adicional_cod, valor) values ( 1, 1, 150.54);
 

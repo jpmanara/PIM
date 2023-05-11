@@ -6,10 +6,9 @@ create table TipoCargo (cod int identity(1,1) not null, valor varchar(255), prim
 create table Funcionario (
 	id int identity(1,1) not null,
 	nome varchar not null,
-	numero_ctps not null,
-	serie_ctps not null,
 	tipo_cargo_cod int not null, 
-	salario_bruto float not null,
+	salario_base float not null,
+	jornada_trabalho_semanal float not null,
 	foreign key (tipo_cargo_cod) references TipoCargo (cod),
 	primary key (id)
 );

@@ -1,10 +1,10 @@
 insert into TipoPagamento (cod, valor) values ('Mensal');
 insert into TipoPagamento (cod, valor) values ('Adiantamento');
 
-insert into TipoDesconto (cod, valor) values (1, 'INSS');
-insert into TipoDesconto (cod, valor) values (2, 'Contribuição sindical');
-insert into TipoDesconto (cod, valor) values (3, 'Vale transporte');
-insert into TipoDesconto (cod, valor) values (4, 'Plano de saúde ou odontológico');
+insert into TipoDesconto (cod, valor) values ('INSS');
+insert into TipoDesconto (cod, valor) values ('Contribuição sindical');
+insert into TipoDesconto (cod, valor) values ('Vale transporte');
+insert into TipoDesconto (cod, valor) values ('Plano de saúde ou odontológico');
 
 
 insert into TipoAdicional (cod, valor) values (1, 'Auxílio de custo teletrabalho');

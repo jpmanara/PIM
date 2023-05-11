@@ -22,6 +22,9 @@ insert into TipoAdicional (valor) values ('Auxílio de custo teletrabalho');
 insert into Funcionario (nome, numero_ctps, serie_ctps, tipo_cargo_cod, salario_bruto) values ('Johnny', 1234, 4321, 1, 4500.50);
 
 insert into Desconto (tipo_desconto_cod, valor_fixo, porcentagem, min_salario, max_salario) values (1, NULL, 7.5, 0, 1110);
+insert into Desconto (tipo_desconto_cod, valor_fixo, porcentagem, min_salario, max_salario) values (1, NULL, 9, 1110.01, 2203.48);
+insert into Desconto (tipo_desconto_cod, valor_fixo, porcentagem, min_salario, max_salario) values (1, NULL, 12, 2203.48, 3305.22);
+insert into Desconto (tipo_desconto_cod, valor_fixo, porcentagem, min_salario, max_salario) values (1, 925.46, NULL, 6610.44, NULL);
 
 create table Desconto (
 	id int identity(1,1) not null,

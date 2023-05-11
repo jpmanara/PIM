@@ -10,7 +10,12 @@ insert into TipoDesconto (valor) values ('Adiantamento');
 insert into TipoDesconto (valor) values ('Ausência');
 
 
-insert into TipoAdicional (cod, valor) values (1, 'Auxílio de custo teletrabalho');
+insert into TipoAdicional (valor) values ('Hora extra');
+insert into TipoAdicional (valor) values ('Adicional noturno');
+insert into TipoAdicional (valor) values ('Adicional noturno');
+insert into TipoAdicional (valor) values ('Auxílio de custo teletrabalho');
+
+
 
 insert into Funcionario (id, salario_base) values (1, 3000);
 insert into Desconto (id, tipo_desconto_cod, valor) values ( 1, 1, 253.64);

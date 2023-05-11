@@ -11,10 +11,10 @@ https://blog.convenia.com.br/como-fazer-o-holerite/
 
 Exemplo de Demonstrativo de Pagamento:
 
-Nome do funcionário: João da Silva
-Cargo: Auxiliar Administrativo
-Salário base: R$ 2.000,00
-Jornada de trabalho: 44 horas semanais
+- Nome do funcionário: João da Silva
+- Cargo: Auxiliar Administrativo
+- Salário base: R$ 2.000,00
+- Jornada de trabalho: 44 horas semanais
 
 Descontos:
 

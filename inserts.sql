@@ -21,7 +21,20 @@ insert into TipoAdicional (valor) values ('Auxílio de custo teletrabalho');
 
 insert into Funcionario (nome, numero_ctps, serie_ctps, tipo_cargo_cod, salario_bruto) values ('Johnny', 1234, 4321, 1, 4500.50);
 
-insert into Desconto (id, tipo_desconto_cod, valor) values ( 1, 1, 253.64);
+insert into Desconto (tipo_desconto_cod, porcentagem, min_salario, max_salario) values ( 1, 1, 253.64);
+
+create table Desconto (
+	id int identity(1,1) not null,
+	tipo_desconto_cod int not null,
+	valor_fixo float,
+	porcentagem int,
+	min_salario int,
+	max_salario int,
+
+	primary key(id),
+	foreign key (tipo_desconto_cod) references TipoDesconto (cod)
+);
+
 insert into Adicional(id, tipo_adicional_cod, valor) values ( 1, 1, 150.54);
 
 insert into Adicional_Funcionario (id, funcionario_id, adicional_id) values (1, 1, 1);

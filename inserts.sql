@@ -6,6 +6,7 @@ insert into TipoDesconto (valor) values ('Contribuição sindical');
 insert into TipoDesconto (valor) values ('Vale transporte');
 insert into TipoDesconto (valor) values ('Plano de saúde');
 insert into TipoDesconto (valor) values ('Plano odontológico');
+insert into TipoDesconto (valor) values ('Adiantamento');
 
 
 insert into TipoAdicional (cod, valor) values (1, 'Auxílio de custo teletrabalho');

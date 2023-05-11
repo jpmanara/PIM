@@ -25,10 +25,10 @@ create table Pagamento (
 create table Desconto (
 	id int identity(1,1) not null,
 	tipo_desconto_cod int not null,
-	valor_fixo float not null,
-	porcentagem int not null,
-	min_salario int not null,
-	max_salario int not null,
+	valor_fixo float,
+	porcentagem int,
+	min_salario int,
+	max_salario int,
 
 	primary key(id),
 	foreign key (tipo_desconto_cod) references TipoDesconto (cod)
@@ -38,9 +38,9 @@ create table Adicional (
 	id int identity(1,1) not null,
 	tipo_adicional_cod int not null,
 	valor_fixo float not null,
-	porcentagem int not null,
-	min_salario int not null,
-	max_salario int not null,
+	porcentagem int,
+	min_salario int,
+	max_salario int,
 
 	primary key(id),
 	foreign key (tipo_adicional_cod) references TipoDesconto (cod)

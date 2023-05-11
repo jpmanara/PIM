@@ -27,12 +27,12 @@ insert into Desconto (tipo_desconto_cod, valor_fixo, porcentagem, min_salario, m
 insert into Desconto (tipo_desconto_cod, valor_fixo, porcentagem, min_salario, max_salario) values (1, 925.46, NULL, 6610.44, NULL);
 
 /*daqui pra baixo tem que arrumar ainda*/
-insert into Adicional(id, tipo_adicional_cod, valor) values ( 1, 1, 150.54);
+insert into Adicional(tipo_adicional_cod, valor_fixo, porcentagem, min_salario, max_salario ) values (1, 150.5, NULL, NULL, NULL);
 
-insert into Adicional_Funcionario (id, funcionario_id, adicional_id) values (1, 1, 1);
-insert into Desconto_Funcionario (id, funcionario_id, desconto_id) values (1, 1, 1);
+insert into Adicional_Funcionario (funcionario_id, adicional_id) values (1, 1);
+insert into Desconto_Funcionario (funcionario_id, desconto_id) values (1, 1);
 
-insert into Adicional_Pagamento (id, pagamento_id, adicional_id) values (1, 1, 1);
-insert into Desconto_Pagamento (id, pagamento_id, desconto_id) values (1, 1, 1);
+insert into Adicional_Pagamento (pagamento_id, adicional_id) values (1, 1);
+insert into Desconto_Pagamento (pagamento_id, desconto_id) values (1, 1);
 
-insert into Pagamento (id, funcionario_id, tipo_pagamento_cod, data_pagamento, valor) values (1, 1, 1, '2023-05-05', 3000);
+insert into Pagamento (funcionario_id, tipo_pagamento_cod, data_pagamento,horas_trabalhadas, valor) values (1, 1, '2023-05-05', 44, 3000);

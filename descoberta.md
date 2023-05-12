@@ -8,6 +8,7 @@
 
 
 https://blog.convenia.com.br/como-fazer-o-holerite/
+https://learn.microsoft.com/pt-br/dotnet/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp
 
 Exemplo de Demonstrativo de Pagamento:
 

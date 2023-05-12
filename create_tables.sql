@@ -5,7 +5,7 @@ create table TipoCargo (cod int identity(1,1) not null, valor varchar(255), prim
 
 create table Funcionario (
 	id int identity(1,1) not null,
-	nome varchar not null,
+	nome varchar(255) not null,
 	tipo_cargo_cod int not null, 
 	salario_base float not null,
 	jornada_trabalho_semanal float not null,

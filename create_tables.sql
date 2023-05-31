@@ -2,6 +2,15 @@ create table TipoPagamento (cod int identity(1,1) not null, valor varchar(255), 
 create table TipoDesconto (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
 create table TipoAdicional (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
 create table TipoCargo (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
+create Table TipoUsuario (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
+
+create table Usuario {
+  tipo_usuario_cod int not null,
+  email varchar(255) not null unique,
+  senha varchar(255) not null,
+  foreign key (tipo_usuario_cod) references TipoUsuario (cod),
+  primary key(email)
+}
 
 create table Funcionario (
 	id int identity(1,1) not null,
@@ -12,6 +21,8 @@ create table Funcionario (
 	tipo_cargo_cod int not null, 
 	salario_base float not null,
 	jornada_trabalho_semanal float not null,
+	usuario_email int not null,
+	foreign key (usuario_id) references Usuario (email),
 	foreign key (tipo_cargo_cod) references TipoCargo (cod),
 	primary key (id)
 );

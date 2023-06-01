@@ -6,7 +6,7 @@ create Table TipoUsuario (cod int identity(1,1) not null, valor varchar(255), pr
 
 create table Empresa {
    id int identity(1,1) not null,
-   cnpj varchar(14) not null,
+   cpf_cnpj varchar(14) not null,
    primary key(id)
 }
 
@@ -23,7 +23,7 @@ create table Funcionario (
 	id int identity(1,1) not null,
 	nome varchar(255) not null,
 	sobrenome varchar(255) not null,
-	cpf varchar(255) not null,
+	cpf varchar(11) not null,
 	tipo_cargo_cod int not null, 
 	salario_base float not null,
 	jornada_trabalho_semanal float not null,

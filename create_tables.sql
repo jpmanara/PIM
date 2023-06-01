@@ -4,6 +4,12 @@ create table TipoAdicional (cod int identity(1,1) not null, valor varchar(255), 
 create table TipoCargo (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
 create Table TipoUsuario (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
 
+create table Empresa {
+   id int identity(1,1) not null,
+   cnpj varchar(14) not null,
+   primary key(id)
+}
+
 create table Usuario {
   tipo_usuario_cod int not null,
   email varchar(255) not null unique,
@@ -22,6 +28,9 @@ create table Funcionario (
 	salario_base float not null,
 	jornada_trabalho_semanal float not null,
 	usuario_email int not null,
+	empresa_id int not null,
+	
+	foreign key (empresa_id) references Empresa (id),
 	foreign key (usuario_id) references Usuario (email),
 	foreign key (tipo_cargo_cod) references TipoCargo (cod),
 	primary key (id)

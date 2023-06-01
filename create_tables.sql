@@ -11,6 +11,7 @@ create table Empresa {
 }
 
 create table Usuario {
+  id int identity(1,1) not null,
   tipo_usuario_cod int not null,
   email varchar(255) not null unique,
   senha varchar(255) not null,
@@ -26,7 +27,7 @@ create table Funcionario (
 	tipo_cargo_cod int not null, 
 	salario_base float not null,
 	jornada_trabalho_semanal float not null,
-	usuario_email int not null,
+	usuario_id int not null,
 	empresa_id int not null,
 	
 	foreign key (empresa_id) references Empresa (id),

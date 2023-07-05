@@ -19,6 +19,8 @@ insert into TipoAdicional (valor) values ('Comissão');
 insert into TipoAdicional (valor) values ('Gratificação');
 insert into TipoAdicional (valor) values ('Auxílio de custo teletrabalho');
 
+insert into Empresa (cpf_cnpj) values ('01236547898745');
+
 insert into Funcionario 
 (nome, sobrenome, cpf, tipo_cargo_cod, salario_base, jornada_trabalho_semanal, usuario_id, empresa_id) 
 values 

@@ -9,6 +9,8 @@
 
 https://blog.convenia.com.br/como-fazer-o-holerite/
 
+https://www.idinheiro.com.br/financaspessoais/holerite/#:~:text=cargo%20e%20natureza%20da%20ocupa%C3%A7%C3%A3o,descontos%20de%20benef%C3%ADcios./
+
 Exemplo de Demonstrativo de Pagamento:
 
 - Nome do funcionário: João da Silva

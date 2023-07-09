@@ -17,7 +17,7 @@ create table Usuario (
   email varchar(255) not null unique,
   senha varchar(255) not null,
   foreign key (tipo_usuario_cod) references TipoUsuario (cod),
-  primary key(email)
+  primary key(id)
 )
 
 

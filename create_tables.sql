@@ -29,11 +29,11 @@ create table Funcionario (
 	tipo_cargo_cod int not null, 
 	salario_base float not null,
 	jornada_trabalho_semanal float not null,
-	usuario_id varchar(255) not null,
+	usuario_id int not null,
 	empresa_id int not null,
 	
 	foreign key (empresa_id) references Empresa (id),
-	foreign key (usuario_id) references Usuario (email),
+	foreign key (usuario_id) references Usuario (id),
 	foreign key (tipo_cargo_cod) references TipoCargo (cod),
 	primary key (id)
 );

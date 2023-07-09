@@ -3,6 +3,8 @@ insert into TipoPagamento (valor) values ('Adiantamento');
 
 insert into TipoCargo (valor) values ('Desenvolvedor');
 
+insert into TipoUsuario (valor) values ('admin');
+
 insert into TipoDesconto (valor) values ('INSS');
 insert into TipoDesconto (valor) values ('Contribuição sindical');
 insert into TipoDesconto (valor) values ('Vale transporte');

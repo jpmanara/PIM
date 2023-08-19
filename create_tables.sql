@@ -72,7 +72,7 @@ create table Adicional (
 	max_salario int,
 
 	primary key(id),
-	foreign key (tipo_adicional_cod) references TipoDesconto (cod)
+	foreign key (tipo_adicional_cod) references TipoAdicional (cod)
 );
 
 create table Adicional_Funcionario (

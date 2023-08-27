@@ -32,8 +32,8 @@ create table Funcionarios (
 	usuarioId int not null,
 	empresaId int not null,
 	
-	foreign key (empresaId) references Empresa (id),
-	foreign key (usuarioId) references Usuario (id),
+	foreign key (empresaId) references Empresas (id),
+	foreign key (usuarioId) references Usuarios (id),
 	foreign key (tipoCargoCod) references TipoCargo (cod),
 	primary key (id)
 );
@@ -48,7 +48,7 @@ create table Pagamentos (
 
 	primary key (id),
 	foreign key (tipoPagamentoCod) references TipoPagamento (cod),
-	foreign key (funcionarioId) references Funcionario(id)
+	foreign key (funcionarioId) references Funcionarios(id)
 );
 
 create table Descontos (
@@ -79,8 +79,8 @@ create table AdicionalFuncionario (
 	id int identity(1,1) not null,
 	funcionarioId int not null,
 	adicionalId int not null,
-	foreign key (funcionarioId) references Funcionario(id),
-	foreign key (adicionalId) references Adicional(id),
+	foreign key (funcionarioId) references Funcionarios(id),
+	foreign key (adicionalId) references Adicionais(id),
 	primary key (id)
 );
 
@@ -88,8 +88,8 @@ create table DescontoFuncionario (
 	id int identity(1,1) not null,
 	funcionarioId int not null,
 	descontoId int not null,
-	foreign key (funcionarioId) references Funcionario(id),
-	foreign key (descontoId) references Desconto(id),
+	foreign key (funcionarioId) references Funcionarios(id),
+	foreign key (descontoId) references Descontos(id),
 	primary key (id)
 );
 
@@ -97,8 +97,8 @@ create table AdicionalPagamento (
 	id int identity(1,1) not null,
 	pagamentoId int not null,
 	adicionalId int not null,
-	foreign key (pagamentoId) references Pagamento(id),
-	foreign key (adicionalId) references Adicional(id),
+	foreign key (pagamentoId) references Pagamentos(id),
+	foreign key (adicionalId) references Adicionais(id),
 	primary key (id)
 );
 
@@ -106,8 +106,8 @@ create table DescontoPagamento (
 	id int identity(1,1) not null,
 	pagamentoId int not null,
 	descontoId int not null,
-	foreign key (pagamentoId) references Pagamento(id),
-	foreign key (descontoId) references Desconto(id),
+	foreign key (pagamentoId) references Pagamentos(id),
+	foreign key (descontoId) references Descontos(id),
 	primary key (id)
 
 

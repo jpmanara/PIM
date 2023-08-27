@@ -23,6 +23,8 @@ insert into TipoAdicional (valor) values ('Auxílio de custo teletrabalho');
 
 insert into Empresa (cpfCnpj) values ('01236547898745');
 
+insert into Usuarios (tipoUsuarioCod, email, senha) values (1, 'joao@gmail.com', '12Qwaszx!');
+
 insert into Funcionario 
 (nomeCompleto, endereco, cpf, tipoCargoCod, salarioBase, jornadaTrabalhoSemanal, usuarioId, empresaId) 
 values 

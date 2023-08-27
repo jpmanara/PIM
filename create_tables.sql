@@ -4,14 +4,14 @@ create table TipoAdicional (cod int identity(1,1) not null, valor varchar(255), 
 create table TipoCargo (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
 create Table TipoUsuario (cod int identity(1,1) not null, valor varchar(255), primary key (cod));
 
-create table Empresa (
+create table Empresas (
    id int identity(1,1) not null,
    nome varchar(255) not null,
    cpfCnpj varchar(14) not null unique,
    primary key(id)
 )
 
-create table Usuario (
+create table Usuarios (
   id int identity(1,1) not null,
   tipoUsuarioCod int not null,
   email varchar(255) not null unique,
@@ -21,7 +21,7 @@ create table Usuario (
 )
 
 
-create table Funcionario (
+create table Funcionarios (
 	id int identity(1,1) not null,
 	nomeCompleto varchar(255) not null,
 	cpf varchar(11) not null unique,
@@ -38,7 +38,7 @@ create table Funcionario (
 	primary key (id)
 );
 
-create table Pagamento (
+create table Pagamentos (
 	id int identity(1,1) not null, 
 	funcionarioId int not null, 
 	tipoPagamentoCod int not null,
@@ -51,7 +51,7 @@ create table Pagamento (
 	foreign key (funcionarioId) references Funcionario(id)
 );
 
-create table Desconto (
+create table Descontos (
 	id int identity(1,1) not null,
 	tipoDescontoCod int not null,
 	valorFixo float,
@@ -63,7 +63,7 @@ create table Desconto (
 	foreign key (tipoDescontoCod) references TipoDesconto (cod)
 );
 
-create table Adicional (
+create table Adicionais (
 	id int identity(1,1) not null,
 	tipoAdicionalCod int not null,
 	valorFixo float not null,

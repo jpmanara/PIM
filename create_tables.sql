@@ -1,8 +1,8 @@
-create table TipoPagamento (cod int identity(1,1) not null, valor varchar(255) not null, primary key (cod));
-create table TipoDesconto (cod int identity(1,1) not null, valor varchar(255) not null, primary key (cod));
-create table TipoAdicional (cod int identity(1,1) not null, valor varchar(255) not null, primary key (cod));
-create table TipoCargo (cod int identity(1,1) not null, valor varchar(255) not null, primary key (cod));
-create Table TipoUsuario (cod int identity(1,1) not null, valor varchar(255) not null, primary key (cod));
+create table TipoPagamento (cod int identity(1,1) not null, valor varchar(255) not null unique, primary key (cod));
+create table TipoDesconto (cod int identity(1,1) not null, valor varchar(255) not null unique, primary key (cod));
+create table TipoAdicional (cod int identity(1,1) not null, valor varchar(255) not null unique, primary key (cod));
+create table TipoCargo (cod int identity(1,1) not null, valor varchar(255) not null unique, primary key (cod));
+create Table TipoUsuario (cod int identity(1,1) not null, valor varchar(255) not null unique, primary key (cod));
 
 create table Empresas (
    id int identity(1,1) not null,

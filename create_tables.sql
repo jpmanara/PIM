@@ -9,7 +9,7 @@ create table Empresas (
    nome varchar(255) not null,
    cpfCnpj varchar(14) not null unique,
    primary key(id)
-)
+);
 
 create table Usuarios (
   id int identity(1,1) not null,
@@ -18,8 +18,7 @@ create table Usuarios (
   senha varchar(255) not null,
   foreign key (tipoUsuarioCod) references TipoUsuario (cod),
   primary key(id)
-)
-
+);
 
 create table Funcionarios (
 	id int identity(1,1) not null,
@@ -116,6 +115,4 @@ create table DescontoPagamento (
 	foreign key (pagamentoId) references Pagamentos(id),
 	foreign key (descontoId) references Descontos(id),
 	primary key (id)
-
-
 );

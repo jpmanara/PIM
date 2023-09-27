@@ -1,124 +1,38 @@
-create table TipoPagamento (cod int identity(1,1) not null, valor varchar(255) not null unique, primary key (cod));
-create table TipoDesconto (cod int identity(1,1) not null, valor varchar(255) not null unique, primary key (cod));
-create table TipoAdicional (cod int identity(1,1) not null, valor varchar(255) not null unique, primary key (cod));
-create table TipoCargo (cod int identity(1,1) not null, valor varchar(255) not null unique, primary key (cod));
-create Table TipoUsuario (cod int identity(1,1) not null, valor varchar(255) not null unique, primary key (cod));
+insert into TipoPagamento (valor) values ('Mensal');
+insert into TipoPagamento (valor) values ('Adiantamento');
+insert into TipoCargo (valor) values ('Desenvolvedor');
+insert into TipoUsuario (valor) values ('admin');
+insert into TipoDesconto (valor) values ('INSS');
+insert into TipoDesconto (valor) values ('Contribuição sindical');
+insert into TipoDesconto (valor) values ('Vale transporte');
+insert into TipoDesconto (valor) values ('Plano de saúde');
+insert into TipoDesconto (valor) values ('Plano odontológico');
+insert into TipoDesconto (valor) values ('Adiantamento');
+insert into TipoDesconto (valor) values ('Ausência');
+insert into TipoAdicional (valor) values ('Hora extra');
+insert into TipoAdicional (valor) values ('Adicional noturno');
+insert into TipoAdicional (valor) values ('Adicional de periculosidade');
+insert into TipoAdicional (valor) values ('Adicional de insalubridade');
+insert into TipoAdicional (valor) values ('Comissão');
+insert into TipoAdicional (valor) values ('Gratificação');
+insert into TipoAdicional (valor) values ('Auxílio de custo teletrabalho');
 
-create table Empresas (
-   id int identity(1,1) not null,
-   nome varchar(255) not null,
-   cpfCnpj varchar(14) not null unique,
-   primary key(id)
-);
+insert into Empresas (cpfCnpj) values ('01236547898745');
 
-create table Usuarios (
-  id int identity(1,1) not null,
-  tipoUsuarioCod int not null,
-  email varchar(255) not null unique,
-  senha varchar(255) not null,
-  foreign key (tipoUsuarioCod) references TipoUsuario (cod),
-  primary key(id)
-);
+insert into Usuarios (tipoUsuarioCod, email, senha) values (1, 'joao@gmail.com', '12Qwaszx!');
 
-create table Funcionarios (
-	id int identity(1,1) not null,
-	nomeCompleto varchar(255) not null,
-	dataNascimento date not null,
-	cpf char(11) not null unique,
-	rg varchar(10) not null unique,
-	celular varchar(16) not null,
-	celularContatoEmergencia varchar(16) not null,
-	endereco varchar(255) not null,
-	bairro varchar(100) not null,
-	cidade varchar(255) not null,
-	estado varchar(100) not null,
-	pis char(11) not null,
-	agenciaBancaria varchar(5) not null,
-	digitoAgencia char(1),
-	contaBancaria varchar(20) not null,
-	digitoConta char(1),	
-	banco varchar(100) not null,
-	tipoCargoCod int not null, 
-	salarioBase float not null,
-	jornadaTrabalhoSemanal float not null,
-	usuarioId int not null,
-	empresaId int not null,
-	
-	foreign key (empresaId) references Empresas (id),
-	foreign key (usuarioId) references Usuarios (id),
-	foreign key (tipoCargoCod) references TipoCargo (cod),
-	primary key (id)
-);
-
-create table Pagamentos (
-	id int identity(1,1) not null, 
-	funcionarioId int not null, 
-	tipoPagamentoCod int not null,
-	dataPagamento DATE not null,
-	horasTrabalhadas float not null,
-	valor float not null,
-
-	primary key (id),
-	foreign key (tipoPagamentoCod) references TipoPagamento (cod),
-	foreign key (funcionarioId) references Funcionarios(id)
-);
-
-create table Descontos (
-	id int identity(1,1) not null,
-	tipoDescontoCod int not null,
-	valorFixo float,
-	porcentagem int,
-	minSalario int,
-	maxSalario int,
-
-	primary key(id),
-	foreign key (tipoDescontoCod) references TipoDesconto (cod)
-);
-
-create table Adicionais (
-	id int identity(1,1) not null,
-	tipoAdicionalCod int not null,
-	valorFixo float not null,
-	porcentagem int,
-	minSalario int,
-	maxSalario int,
-
-	primary key(id),
-	foreign key (tipoAdicionalCod) references TipoAdicional (cod)
-);
-
-create table AdicionalFuncionario (
-	id int identity(1,1) not null,
-	funcionarioId int not null,
-	adicionalId int not null,
-	foreign key (funcionarioId) references Funcionarios(id),
-	foreign key (adicionalId) references Adicionais(id),
-	primary key (id)
-);
-
-create table DescontoFuncionario (
-	id int identity(1,1) not null,
-	funcionarioId int not null,
-	descontoId int not null,
-	foreign key (funcionarioId) references Funcionarios(id),
-	foreign key (descontoId) references Descontos(id),
-	primary key (id)
-);
-
-create table AdicionalPagamento (
-	id int identity(1,1) not null,
-	pagamentoId int not null,
-	adicionalId int not null,
-	foreign key (pagamentoId) references Pagamentos(id),
-	foreign key (adicionalId) references Adicionais(id),
-	primary key (id)
-);
-
-create table DescontoPagamento (
-	id int identity(1,1) not null,
-	pagamentoId int not null,
-	descontoId int not null,
-	foreign key (pagamentoId) references Pagamentos(id),
-	foreign key (descontoId) references Descontos(id),
-	primary key (id)
-);
+insert into Funcionario 
+(nomeCompleto, endereco, cpf, tipoCargoCod, salarioBase, jornadaTrabalhoSemanal, usuarioId, empresaId) 
+values 
+('Joao','Manara','12365478987',1,3000,40,'janetinha@gmail.com',1);
+insert into Desconto (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, NULL, 7.5, 0, 1110);
+insert into Desconto (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, NULL, 9, 1110.01, 2203.48);
+insert into Desconto (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, NULL, 12, 2203.48, 3305.22);
+insert into Desconto (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, 925.46, NULL, 6610.44, NULL);
+/*daqui pra baixo tem que arrumar ainda*/
+insert into Adicional(tipoAdicionalCod, valorFixo, porcentagem, minSalario, maxSalario ) values (1, 150.5, NULL, NULL, NULL);
+insert into AdicionalFuncionario (funcionarioId, adicionalId) values (1, 1);
+insert into DescontoFuncionario (funcionarioId, descontoId) values (1, 1);
+insert into AdicionalPagamento (pagamentoId, adicionalId) values (1, 1);
+insert into DescontoPagamento (pagamentoId, descontoId) values (1, 1);
+insert into Pagamento (funcionarioId, tipoPagamentoCod, dataPagamento,horasTrabalhadas, valor) values (1, 1, '2023-05-05', 44, 3000);

@@ -7,7 +7,7 @@ create Table TipoUsuario (cod int identity(1,1) not null, valor varchar(255) not
 create table Empresas (
    id int identity(1,1) not null,
    nome varchar(255) not null,
-   cpfCnpj varchar(14) not null unique,
+   cnpj varchar(14) not null unique,
    primary key(id)
 );
 

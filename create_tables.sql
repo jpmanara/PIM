@@ -41,7 +41,7 @@ create table Funcionarios (
 	tipoCargoCod int not null, 
 	salarioBase float not null,
 	jornadaTrabalhoSemanal float not null,
-	usuarioId int not null,
+	usuarioId varchar(255) not null,
 	empresaId int not null,
 	
 	foreign key (empresaId) references Empresas (id),

@@ -25,12 +25,11 @@ insert into Funcionarios
 (nomeCompleto, dataNascimento, cpf, rg, celular, celularContatoEmergencia, endereco, bairro, cidade, estado, pis, tipoCargoCod, salarioBase, jornadaTrabalhoSemanal, empresaId) 
 values 
 ('João Guilherme Rodrigues','2023-09-26T10:00:00','12365478987', '477856358', '7778998784547', '7778998784547', 'Rua das Hortaliças', 'Jardim Florido', 'São Caetano', 'São Paulo', '78541296587', 1,3000,40,1);
-insert into Desconto (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, NULL, 7.5, 0, 1110);
-insert into Desconto (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, NULL, 9, 1110.01, 2203.48);
-insert into Desconto (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, NULL, 12, 2203.48, 3305.22);
-insert into Desconto (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, 925.46, NULL, 6610.44, NULL);
-/*daqui pra baixo tem que arrumar ainda*/
-insert into Adicional(tipoAdicionalCod, valorFixo, porcentagem, minSalario, maxSalario ) values (1, 150.5, NULL, NULL, NULL);
+insert into Descontos (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, NULL, 7.5, 0, 1110);
+insert into Descontos (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, NULL, 9, 1110.01, 2203.48);
+insert into Descontos (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, NULL, 12, 2203.48, 3305.22);
+insert into Descontos (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, 925.46, NULL, 6610.44, NULL);
+insert into Adicionais(tipoAdicionalCod, valorFixo, porcentagem, minSalario, maxSalario ) values (1, 150.5, NULL, NULL, NULL);
 insert into AdicionalFuncionario (funcionarioId, adicionalId) values (1, 1);
 insert into DescontoFuncionario (funcionarioId, descontoId) values (1, 1);
 insert into AdicionalPagamento (pagamentoId, adicionalId) values (1, 1);

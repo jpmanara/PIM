@@ -41,11 +41,11 @@ create table Funcionarios (
 	tipoCargoCod int not null, 
 	salarioBase float not null,
 	jornadaTrabalhoSemanal float not null,
-	usuarioId int,
+	usuarioId int not null,
 	empresaId int not null,
 	
 	foreign key (empresaId) references Empresas (id),
-	foreign key (usuarioId) references Usuarios (id),
+	foreign key (usuarioId) references Usuarios (email),
 	foreign key (tipoCargoCod) references TipoCargo (cod),
 	primary key (id)
 );

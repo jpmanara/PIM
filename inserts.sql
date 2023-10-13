@@ -17,14 +17,14 @@ insert into TipoAdicional (valor) values ('Comissão');
 insert into TipoAdicional (valor) values ('Gratificação');
 insert into TipoAdicional (valor) values ('Auxílio de custo teletrabalho');
 
-insert into Empresas (cpfCnpj) values ('01236547898745');
+insert into Empresas (nome, cnpj) values ('CI&T software', '01236547898745');
 
 insert into Usuarios (tipoUsuarioCod, email, senha) values (1, 'joao@gmail.com', '12Qwaszx!');
 
-insert into Funcionario 
-(nomeCompleto, endereco, cpf, tipoCargoCod, salarioBase, jornadaTrabalhoSemanal, usuarioId, empresaId) 
+insert into Funcionarios
+(nomeCompleto, dataNascimento, cpf, rg, celular, celularContatoEmergencia, endereco, bairro, cidade, estado, pis, tipoCargoCod, salarioBase, jornadaTrabalhoSemanal, empresaId) 
 values 
-('Joao','Manara','12365478987',1,3000,40,'janetinha@gmail.com',1);
+('João Guilherme Rodrigues','2023-09-26T10:00:00','12365478987', '477856358', '7778998784547', '7778998784547', 'Rua das Hortaliças', 'Jardim Florido', 'São Caetano', 'São Paulo', '78541296587', 1,3000,40,1);
 insert into Desconto (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, NULL, 7.5, 0, 1110);
 insert into Desconto (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, NULL, 9, 1110.01, 2203.48);
 insert into Desconto (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxSalario) values (1, NULL, 12, 2203.48, 3305.22);

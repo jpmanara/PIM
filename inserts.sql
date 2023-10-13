@@ -32,6 +32,7 @@ insert into Descontos (tipoDescontoCod, valorFixo, porcentagem, minSalario, maxS
 insert into Adicionais(tipoAdicionalCod, valorFixo, porcentagem, minSalario, maxSalario ) values (1, 150.5, NULL, NULL, NULL);
 insert into AdicionalFuncionario (funcionarioId, adicionalId) values (1, 1);
 insert into DescontoFuncionario (funcionarioId, descontoId) values (1, 1);
+
+insert into Pagamentos (funcionarioId, tipoPagamentoCod, dataPagamento,horasTrabalhadas, valor) values (1, 1, '2023-05-05', 44, 3000);
 insert into AdicionalPagamento (pagamentoId, adicionalId) values (1, 1);
 insert into DescontoPagamento (pagamentoId, descontoId) values (1, 1);
-insert into Pagamentos (funcionarioId, tipoPagamentoCod, dataPagamento,horasTrabalhadas, valor) values (1, 1, '2023-05-05', 44, 3000);
